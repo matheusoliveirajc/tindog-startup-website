@@ -1,6 +1,7 @@
 body{
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
+  color: rgb(27, 27, 27);
 }
 @keyframes gradient-animation {
   0% {
@@ -41,4 +42,168 @@ body{
   padding: 0.77rem 1rem;
   border-radius: 8px;
   margin-left: 10px;
+}
+#features{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+.features-list{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0px;
+}
+.icon-features{
+  float: left;
+  padding-top: 20px;
+  padding-right: 15px;
+}
+.info-features{
+  float: right;
+}
+#testimonial{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(245, 245, 245);
+  height: 600px;
+}
+#testimonial h1{
+  padding-bottom: 1.8rem;
+  margin-top: 0;
+  text-align: center;
+}
+#testimonial img{
+  border-radius: 50%;
+  width: 200px;
+}
+#testimonial p{
+  padding-top: 1rem;
+  text-align: center;
+}
+#pricing{
+  padding: 4rem 0rem;
+  height: 600px;
+}
+#pricing > h1{
+  font-weight: 100;
+  font-size: 2rem;
+  margin: 0px;
+  text-align: center;
+}
+#pricing > p{text-align: center;}
+.pricing-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 80px;
+}
+.pricing-plan{
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+  padding: 10px;
+  width: 280px;
+}
+.plan-title{
+  background-color: #f8f8f8;
+  padding: 10px 0px;
+  text-align: center;
+  margin: -10px -10px 0px -10px;
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 400;
+}
+.plan-price{
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.7rem;
+  color: #24292f;
+}
+.plan-price span{
+  color: #5a5b5d;
+  font-size: 1.4rem;
+}
+.plan-features{
+  list-style: none;
+  padding: 0px;
+  text-align: center;
+}
+.plan-features li{
+  margin: 10px 0px;
+}
+.btn-free-plan, .btn-paid-plan{
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #808080;
+  border: 1px solid #808080;
+  border-radius: 8px;
+  padding: 10px;
+  transition: all 0.3s;
+}
+.btn-free-plan:hover{
+  border-color: #212528;
+  color: #212528;
+}
+.btn-paid-plan{
+  background-color: #212429;
+  color: rgba(240, 240, 240, 1);
+}
+.btn-paid-plan:hover{opacity: 0.9;}
+.premium-plan{
+  border: 1px solid #232428;
+  border-radius: 10px;
+  padding: 10px;
+  width: 280px;
+}
+.premium-plan h1{
+  background-color: #212429;
+  color: #fff;
+  padding: 10px 0px;
+  text-align: center;
+  margin: -10px -10px 0px -10px;
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 400; 
+}
+footer{
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 250px;
+  padding-top: 3rem;
+}
+footer nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+footer ul{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0px;
+}
+@media (max-width: 1120px) {
+  #features{height: 700px;}
+  .features-list{
+    flex-direction: column;
+    max-width: 300px;
+    gap: 30px;
+    justify-content: space-between;
+    height: 100%;
+  }
 }
