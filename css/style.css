@@ -14,26 +14,28 @@
   --plan-color2: #58595d;
 }
 @keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0%{background-position: 0% 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0% 50%;}
 }
-header{
+#main-header, #main-footer{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 8px;
-  background: linear-gradient(280deg, var(--blue-header), var(--red-header), var(--orange-header));
+  background-image: linear-gradient(280deg, var(--blue-header), var(--red-header), var(--orange-header));
   background-size: 180% 180%;
-  animation: gradient-animation 17s ease infinite;
+  animation: gradient-animation 10s ease-in-out alternate infinite;
   padding: 20px 10px 0px 10px;
+}
+.header-content-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1500px;
 }
 .title-header{display: block;}
 .title-header h1{
@@ -45,6 +47,7 @@ header{
   display: flex;
   justify-content: flex-start;
   gap: 10px;
+  padding-bottom: 1rem;
 }
 .apple-btn-download, .playStore-btn-download{
   text-decoration: none;
@@ -74,11 +77,11 @@ header{
   width: 100%;
 }
 #features{
-  background-color: green;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 8px;
+  padding: 1rem 10px;
+  height: 600px;
 }
 .features-list{
   list-style: none;
@@ -86,10 +89,176 @@ header{
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 1500px;
+  gap: 2rem;
 }
 .features-list li{
-  background-color: blue;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
 }
-.icon-features{
+.features-icon{
   background-color: var(--icon-features-bg);
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+#testimonial{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 10px;
+  height: 600px;
+}
+#testimonial h1{text-align: center;}
+#testimonial img{
+  display: block;
+  border-radius: 50%;
+  margin: 2.1rem 0px;
+  width: 100%;
+  max-width: 300px;
+}
+#pricing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 10px;
+  height: 700px;
+}
+#pricing > h1{
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+}
+#pricing > h2{
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.pricing-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto;
+  gap: 10px;
+}
+.pricing-plan{
+  border: 1px solid var(--plan-border);
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  color: var(--plan-color1);
+}
+.plan-title{
+  background-color: rgb(240, 240, 240);
+  font-weight: 400;
+  font-size: 1.3rem;
+  border-radius: 8px 8px 0px 0px;
+  padding: 10px;
+}
+.plan-title-premium{
+  background-color: var(--plan-color1);
+  color: #fff;
+}
+.plan-price{
+  font-weight: 500;
+  margin: 10px 0px;
+  padding: 5px;
+}
+.plan-price span{
+  font-weight: 400;
+  opacity: 50%;
+}
+.plan-features{
+  list-style: none;
+  padding: 5px;
+  text-align: center;
+  line-height: 30px;
+}
+.btn-get-plan{
+  text-decoration: none;
+  color: var(--plan-color1);
+  border: 1px solid var(--plan-color1);
+  border-radius: 8px;
+  display: block;
+  width: 94%;
+  margin: 15px auto;
+  padding: 8px 5px;
+  transition: all 0.2s ease-in-out;
+}
+.btn-paid-plan{
+  background-color: var(--plan-color1);
+  color: #fff;
+}
+.btn-get-plan:hover{background-color: rgb(230, 230, 230);}
+.btn-paid-plan:hover{
+  background-color: var(--plan-color1);
+  opacity: 80%;
+}
+#main-footer{
+  height: 200px;
+  flex-direction: column;
+  padding: 2rem 10px;
+  gap: 1rem;
+  text-align: center;
+}
+#main-footer > p{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 5px;
+}
+.nav-list{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 30px;
+  padding: 0px 10px;
+}
+.nav-list a, .dev-github-link{
+  text-decoration: none;
+  color: #000;
+  transition: color 0.2s ease-in-out;
+}
+.dev-github-link{
+  text-decoration: underline;
+  font-weight: 700;
+  display: block;
+}
+.nav-list a:hover,.dev-github-link:hover{color: #fff;}
+@media (max-width: 939px){
+  #pricing{height: auto;}
+  .pricing-container{
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media (max-width: 590px){
+  .features-list{
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 320px;
+  }
+}
+@media (max-width: 465px){
+  .header-content-container{flex-direction: column;}
+  .header-links{justify-content: center;}
+  .title-header{text-align: center;}
+}
+@media (max-width: 350px){
+  #main-footer{height: auto;}
+  .nav-list{flex-direction: column;}
 }
